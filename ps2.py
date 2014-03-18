@@ -36,5 +36,5 @@ ans = d_equation(num_ngts)
 print (ans)
 keys = m.keys()
 values = m.values()
-#for i in range(len(keys)):
-  #print("%s*6+%s*9+%s*20=%s"%values[i][0],values[i][1],values[i][2],keys[i])
+for i in range(len(keys)):
+  print("%d*6+%d*9+%d*20=%d"%(values[i][0],values[i][1],values[i][2],keys[i]))
