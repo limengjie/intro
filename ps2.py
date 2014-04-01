@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+'''Problem set 2.'''
 #Problem1
 nA = 6
 nB = 9
