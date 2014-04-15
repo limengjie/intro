@@ -78,14 +78,9 @@ def get_word_score(word, n):
     """
     # TO DO ...
     value = 0
-    #s = set([])
-    l = 0
     for letter in word:
       value += SCRABBLE_LETTER_VALUES[letter]
-      #s.add(letter)
-      l += 1
-    #if len(s) == n:
-    if l == n:
+    if len(word) == n:
       value += 50
     return value
 
