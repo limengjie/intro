@@ -280,7 +280,7 @@ def pick_best_word(hand,word_list, pts_dict):
       ans = word
       hi_pt = pts_dict[word]
   if ans == 'NONE':
-    print("No answers.")
+    print("No answer.")
     return '.'
   else:
     print("The best word is %s. "%ans)

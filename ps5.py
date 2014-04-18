@@ -10,7 +10,7 @@ import string
 
 VOWELS = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
-HAND_SIZE = 7
+HAND_SIZE = 3
 
 SCRABBLE_LETTER_VALUES = {
     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
@@ -156,15 +156,12 @@ def update_hand(hand, word):
     """
     # TO DO ...
     new_hand = hand.copy()
-    #print ('new hand: ',new_hand)
     for letter in word:
       if new_hand[letter] != 0:
         new_hand[letter] -= 1
       else:
         return False
     return new_hand
-
-
 
 #
 # Problem #3: Test word validity
@@ -230,7 +227,7 @@ def play_hand(hand, word_list,tot_score):
     if len(hand) == 0:
       return tot_score
     display_hand(hand)
-    word = raw_input("Enter word or n, r, e:  ")
+    word = raw_input("Enter a word or n, r, e:  ")
     while not is_valid_word(word,hand, word_list):
       if word == "e":
         print ("total score: %d points"% tot_score)
